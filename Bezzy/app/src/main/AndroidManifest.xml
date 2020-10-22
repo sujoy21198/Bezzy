@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bezzy">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bezzy">
+        <activity android:name=".UI.EditprofileActivity"></activity>
+        <activity android:name=".UI.OTPActivity" />
+        <activity android:name=".UI.ShowProfileActivity" />
+        <activity android:name=".UI.RegistrationActivity" />
+        <activity android:name=".UI.ChangepasswordActivity" />
+        <activity android:name=".UI.COTPActivity" />
+        <activity android:name=".UI.ForgetPasswordActivity" />
+        <activity android:name=".UI.LoginActivity" />
+        <activity android:name=".UI.ProfileActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
