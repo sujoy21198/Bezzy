@@ -49,6 +49,16 @@
             app:fabAlignmentMode="center"
             android:layout_alignParentBottom="true">
         </com.google.android.material.bottomnavigation.BottomNavigationView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            app:elevation="8dp"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>
