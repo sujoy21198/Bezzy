@@ -1,4 +1,4 @@
-package com.example.bezzy;
+package com.example.bezzy.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,11 +11,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.bezzy.UI.LoginActivity;
-import com.example.bezzy.UI.ProfileActivity;
+import com.example.bezzy.R;
 import com.example.bezzy.Utils.Utility;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
     private View decorView;
     Button button;
     private static int splashtimeout=2000;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
         View overlay = findViewById(R.id.splash_layout);
         button = findViewById(R.id.splash_button);
         logo=(ImageView)findViewById(R.id.logo_bezzy);
@@ -36,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });*/
-        if(Utility.getOtpScreen(MainActivity.this).equals("1")){
+        if(Utility.getOtpScreen(SplashActivity.this).equals("1")){
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
 
@@ -49,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
             Animation mysin= AnimationUtils.loadAnimation(this,R.anim.animation);
             logo.startAnimation(mysin);
         }else{
-            if(Utility.getLogin(MainActivity.this).equals("1")){
+            if(Utility.getLogin(SplashActivity.this).equals("1")){
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();
 
@@ -65,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();
 
